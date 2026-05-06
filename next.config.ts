@@ -9,6 +9,7 @@ const ASSET_PREFIX_MAP: Record<string, string> = {
   foucher: "https://foucher.vercel.app",
   leman: "https://leman-pi.vercel.app",
   scuderia: "https://scuderia-jade.vercel.app",
+  versoie: "https://versoie.vercel.app",
 };
 
 const isProd = process.env.NODE_ENV === "production";

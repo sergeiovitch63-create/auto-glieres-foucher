@@ -1,0 +1,220 @@
+import type { Tenant } from "@/lib/tenant-types";
+
+export const versoie: Tenant = {
+  id: "versoie",
+  name: "Auto-École de la Versoie — Anne Formation",
+  shortName: "La Versoie",
+  domain: "auto-ecole-de-la-versoie.com",
+  founded: 2005,
+
+  address: "21 Bd des Trolliettes, 74200 Thonon-les-Bains",
+  street: "21 Bd des Trolliettes",
+  city: "Thonon-les-Bains",
+  postalCode: "74200",
+  region: "Haute-Savoie",
+  country: "France",
+  phone: "04 50 70 23 13",
+  phoneIntl: "+33450702313",
+  email: "contact@auto-ecole-de-la-versoie.com",
+  geo: { lat: 46.3719, lng: 6.4756 },
+
+  hours: {
+    monday: ["09:00-12:00", "14:00-19:00"],
+    tuesday: ["09:00-12:00", "14:00-19:00"],
+    wednesday: ["09:00-12:00", "14:00-19:00"],
+    thursday: ["09:00-12:00", "14:00-19:00"],
+    friday: ["09:00-12:00", "14:00-19:00"],
+    saturday: ["09:00-12:00"],
+    sunday: [],
+  },
+
+  rating: 4.5,
+  ratingCount: 147,
+  studentsTrained: 3500,
+  successRateFirstAttempt: 78,
+  positiveEvaluation: 95,
+  qualiopi: true,
+  cpfEligible: true,
+  permisAUnEuro: true,
+
+  brand: {
+    mode: "light",
+    accent: "#047857",
+    accentName: "vert sapin",
+    logo: { monogram: "V", wordmark: "La Versoie", sub: "Anne Formation" },
+  },
+
+  copy: {
+    heroBadge: "4,5/5 sur 147 avis",
+    heroBadgeSecondary: "À Thonon depuis 2005",
+    heroTitleLine1: "Le permis,",
+    heroTitleLine2: "à la Versoie",
+    heroSubtitle:
+      "Permis B (manuelle, boîte auto, passerelle), Moto A2, conduite accompagnée et code en ligne à __CITY__. Une équipe pédagogue qui forme depuis __FOUNDED__ avec __SUCCESS__% de réussite au premier passage.",
+    statsTitle: "20 ans d'expérience. Et 147 avis pour le prouver.",
+    aboutIntro:
+      "Créée en __FOUNDED__ à __CITY__, l'Auto-École de la Versoie (Anne Formation) accompagne les habitants du Chablais avec une approche pédagogue, à l'écoute, et une équipe stable. 20 ans plus tard, la même exigence.",
+    finalCtaBadge: "🌲 Inscriptions ouvertes",
+  },
+
+  services: [
+    {
+      slug: "permis-b", name: "Permis B",
+      short: "Le permis voiture, boîte manuelle.",
+      icon: "Car", ageMin: 17, duration: "3 à 6 mois",
+      hourPrice: 55, packagePrice: 1390, hours: 20,
+      cpfEligible: true, oneEuroDay: true, acceleratedAvailable: true,
+      highlights: ["Forfait 20h dès 1 390 €", "Boîte manuelle, voiture récente", "Examens blancs réguliers", "Suivi pédagogique sur-mesure"],
+      description: "La formation classique sur boîte manuelle, accessible à tous. 20 heures de conduite, code en ligne inclus, frais d'examen compris. Notre équipe te suit du dossier à l'examen.",
+      programme: [
+        { title: "1. Maîtriser le maniement du véhicule", items: ["Découvrir les commandes, démarrages, arrêts", "Diriger en avant et en arrière", "Régulation de l'allure"] },
+        { title: "2. Appréhender la route", items: ["Routes à chaussée séparée, intersections", "Communication entre usagers", "Choisir sa position sur la chaussée"] },
+        { title: "3. Circuler dans des situations difficiles", items: ["Circulation en ville, hors agglomération", "Conduite de nuit, sur autoroute", "Conditions météo dégradées"] },
+        { title: "4. Pratiquer une conduite autonome", items: ["Anticiper, partager la route", "Économiser le carburant", "Préparer un trajet, gérer la fatigue"] },
+      ],
+    },
+    {
+      slug: "permis-boite-automatique", name: "Permis boîte automatique",
+      short: "Plus court, plus simple, dès 13h de conduite.",
+      icon: "Cog", ageMin: 17, duration: "2 à 4 mois",
+      hourPrice: 55, packagePrice: 1290, hours: 13,
+      cpfEligible: true, oneEuroDay: true,
+      highlights: ["Forfait dès 1 290 €", "Minimum légal 13h (vs 20h)", "Idéal pour passer plus vite", "Passerelle vers manuelle possible"],
+      description: "Le BEA (boîte auto), c'est la voie express. Formation plus courte, examen identique à la manuelle, et tu peux toujours basculer en manuelle plus tard via la passerelle (7h).",
+      programme: [
+        { title: "1. Prise en main véhicule automatique", items: ["Pédales, sélecteur, parking brake", "Démarrages en côte", "Manœuvres de base"] },
+        { title: "2. Circulation urbaine et inter-urbaine", items: ["Trajectoires, intersections", "Lecture de panneaux", "Gestion des angles morts"] },
+        { title: "3. Conditions difficiles", items: ["Pluie, nuit, autoroute", "Trafic dense", "Stationnement avancé"] },
+        { title: "4. Autonomie & éco-conduite", items: ["Trajets longs", "Anticipation", "Conduite économique"] },
+      ],
+    },
+    {
+      slug: "passerelle", name: "Passerelle boîte auto → manuelle",
+      short: "Tu as le BEA ? 7h et tu passes en manuelle.",
+      icon: "ArrowLeftRight", ageMin: 18, duration: "7 heures",
+      packagePrice: 490, cpfEligible: true,
+      highlights: ["7h de formation seulement", "Pas d'examen à repasser", "Forfait à 490 €", "Disponible 3 mois après le BEA"],
+      description: "La passerelle, c'est 7h de formation et tu obtiens le droit de conduire toutes les voitures. Pas d'examen à repasser, juste une attestation. Très demandée chez nous.",
+      programme: [
+        { title: "Module unique 7h", items: ["Embrayage et boîte de vitesses", "Démarrages en côte", "Circulation manuelle", "Attestation finale"] },
+      ],
+    },
+    {
+      slug: "permis-moto-a2", name: "Permis Moto A2",
+      short: "La moto bridée 35 kW dès 18 ans.",
+      icon: "Bike", ageMin: 18, duration: "1 à 3 mois",
+      hourPrice: 70, packagePrice: 1290, hours: 20,
+      cpfEligible: true,
+      highlights: ["20h de plateau & circulation", "Moto récente bridée", "Équipement examen fourni", "Préparation A après 2 ans"],
+      description: "Le permis Moto A2, machines bridées à 35 kW, accessibles dès 18 ans. Formation plateau + circulation complète, et tu passes en A après 2 ans sans repasser l'examen.",
+      programme: [
+        { title: "1. Maîtrise de la moto à allure réduite", items: ["Maniabilité plateau", "Évitement, freinage", "Démarrage en côte"] },
+        { title: "2. Plateau allure normale", items: ["Slalom, lent et rapide", "Freinage d'urgence", "Évitement obstacle"] },
+        { title: "3. Circulation", items: ["Trajectoires moto", "Gestion intersections", "Trafic dense"] },
+        { title: "4. Autonomie", items: ["Trajet long", "Météo dégradée", "Conduite défensive"] },
+      ],
+    },
+    {
+      slug: "conduite-accompagnee", name: "Conduite accompagnée (AAC)",
+      short: "Dès 15 ans. La meilleure stat de réussite.",
+      icon: "Users", ageMin: 15, duration: "1 à 3 ans",
+      hourPrice: 55, packagePrice: 1490, hours: 20,
+      cpfEligible: true, oneEuroDay: true,
+      highlights: ["Démarre dès 15 ans", "Permis dès 17 ans", "Réussite 1er passage : 88%", "Période probatoire réduite"],
+      description: "L'AAC est l'option la plus solide : tu démarres ta formation dès 15 ans, tu passes le code, puis tu roules avec un accompagnateur pendant 1 an minimum (3 000 km). Permis à 17 ans avec 88% de réussite.",
+      programme: [
+        { title: "1. Formation initiale (20h)", items: ["Apprentissage avec moniteur", "4 compétences REMC", "Évaluation finale"] },
+        { title: "2. Rendez-vous préalable (2h)", items: ["Bilan avec ton accompagnateur", "Mise en situation", "Documents officiels"] },
+        { title: "3. Phase accompagnée", items: ["1 an minimum, 3 000 km", "Trajets variés", "Carnet d'apprentissage"] },
+        { title: "4. RDV pédagogiques (2x2h)", items: ["Bilan à mi-parcours", "Bilan final avant examen"] },
+      ],
+    },
+    {
+      slug: "code-de-la-route", name: "Code de la route",
+      short: "Cours en salle + entraînement en ligne illimité.",
+      icon: "BookOpen", ageMin: 15, duration: "1 à 3 mois",
+      packagePrice: 250, cpfEligible: true,
+      highlights: ["Forfait 6 mois à 250 €", "Plateforme web + mobile", "+ de 1 000 questions officielles", "Examen sur place"],
+      description: "Le code, on le bosse intelligemment. Plateforme accessible 24/7, cours en salle réguliers, examens blancs hebdomadaires. Tu passes l'examen quand tu es prêt.",
+      programme: [
+        { title: "Les 10 thèmes officiels", items: ["Circulation routière", "Conducteur", "Route", "Autres usagers", "Notions diverses", "Premiers secours", "Mécanique", "Sécurité passagers", "Environnement", "Réglementation"] },
+        { title: "Méthode", items: ["Quiz quotidien recommandé", "Examens blancs hebdomadaires", "Cours en salle réguliers"] },
+      ],
+    },
+  ],
+
+  packages: [
+    { slug: "permisB20h", label: "Permis B — Forfait 20h", price: 1390, hours: 20,
+      includes: ["Code en ligne 6 mois", "20h de conduite", "Frais de présentation à l'examen", "Livret d'apprentissage"], popular: true },
+    { slug: "permisB30h", label: "Permis B — Forfait 30h", price: 2050, hours: 30,
+      includes: ["Code en ligne 12 mois", "30h de conduite", "2 examens blancs", "Frais d'inscription préfecture"] },
+    { slug: "permisAuto", label: "Permis boîte automatique 13h", price: 1290, hours: 13,
+      includes: ["Code en ligne 6 mois", "13h de conduite (minimum légal)", "Frais de présentation"] },
+    { slug: "permisAAC", label: "Conduite accompagnée — Forfait", price: 1490, hours: 20,
+      includes: ["Code en ligne 12 mois", "20h de conduite", "RDV préalable accompagnateur", "2 RDV pédagogiques"] },
+    { slug: "permisMotoA2", label: "Permis Moto A2", price: 1290, hours: 20,
+      includes: ["Code moto", "20h de plateau & circulation", "Équipement examen fourni"] },
+    { slug: "passerelle", label: "Passerelle BEA → manuelle", price: 490, hours: 7,
+      includes: ["7h de formation", "Attestation officielle"], tag: "7h, sans examen" },
+    { slug: "code", label: "Code de la route — 6 mois", price: 250,
+      includes: ["Accès web & mobile illimité", "Cours en salle", "Inscription à l'examen"] },
+  ],
+
+  hourlyRates: [
+    { key: "standard", price: 55, label: "Heure de conduite — boîte manuelle" },
+    { key: "automatic", price: 55, label: "Heure de conduite — boîte automatique" },
+    { key: "moto", price: 70, label: "Heure de moto A2" },
+    { key: "bridge", price: 70, label: "Heure passerelle auto → manuelle" },
+  ],
+
+  team: [
+    { name: "Anne", role: "Directrice & monitrice", bio: "À la tête de l'auto-école depuis 2005. Sa pédagogie et sa bienveillance sont citées dans la majorité des avis Google.", senior: true },
+    { name: "Équipe pédagogique", role: "Moniteurs voiture & moto", bio: "Une équipe stable, réputée patiente et à l'écoute, qui forme tout type d'élèves : débutants, repassage après échec, conduite accompagnée." },
+    { name: "Secrétariat", role: "Accueil & gestion dossiers", bio: "Cité 10+ fois dans les avis Google pour sa réactivité et sa gentillesse. Le pivot de l'auto-école." },
+  ],
+
+  nearbyCities: [
+    { name: "Annemasse", slug: "annemasse", km: 35, intro: "À 35 minutes d'Annemasse, l'Auto-École de la Versoie accueille des élèves du Genevois venant pour notre approche pédagogue et notre fort taux de réussite.", highlights: ["35 min d'Annemasse", "4,5/5 sur 147 avis Google", "Permis B + Moto A2", "Boîte auto et passerelle disponibles", "Accompagnement après échec"] },
+    { name: "Ambilly", slug: "ambilly", km: 38, intro: "Pour les habitants d'Ambilly cherchant une formation premium, La Versoie est à 40 minutes via l'autoroute.", highlights: ["38 min d'Ambilly", "Réputation 20 ans", "Pédagogie reconnue", "Forfait Permis B à 1 390€"] },
+    { name: "Gaillard", slug: "gaillard", km: 36, intro: "À 36 minutes de Gaillard, La Versoie accueille des élèves du Chablais et au-delà.", highlights: ["36 min de Gaillard", "Auto + Moto + Code", "Conduite accompagnée dès 15 ans", "Note Google 4,5/5"] },
+    { name: "Ville-la-Grand", slug: "ville-la-grand", km: 37, intro: "À 37 minutes de Ville-la-Grand, on accueille les élèves prêts à rouler sur Thonon pour leur formation.", highlights: ["37 min de Ville-la-Grand", "Excellent taux de réussite", "Équipe stable depuis 2005", "Pratique sur Thonon-les-Bains"] },
+    { name: "Vétraz-Monthoux", slug: "vetraz-monthoux", km: 40, intro: "Pour les Vétraziens motivés par notre réputation, La Versoie reste accessible via l'autoroute.", highlights: ["40 min de Vétraz-Monthoux", "147 avis Google, 4,5/5", "Pédagogie reconnue", "Permis 1€/jour disponible"] },
+  ],
+
+  reviews: [
+    { id: "r1", author: "Janick S.", initials: "JS", date: "2026-02-10", rating: 5, formation: "Permis B", text: "Je recommande cette auto-école les yeux fermés. Après plusieurs échecs à l'examen, j'avais totalement perdu confiance en moi. L'équipe a su me soutenir, me rassurer et surtout me redonner confiance. Leur pédagogie est exceptionnelle." },
+    { id: "r2", author: "Tim C.", initials: "TC", date: "2026-01-15", rating: 5, formation: "Passerelle", text: "Très bonne auto-école ! J'ai passé mon permis en boîte automatique puis la passerelle en manuelle dans cette auto-école, et tout s'est très bien déroulé." },
+    { id: "r3", author: "Marie D.", initials: "MD", date: "2025-12-22", rating: 5, formation: "Permis B", text: "Permis obtenu du premier coup. Anne et son équipe sont au top. Pédagogue, à l'écoute, beaucoup de patience. Je recommande à 100%." },
+    { id: "r4", author: "Lucas P.", initials: "LP", date: "2025-11-18", rating: 5, formation: "Permis Moto A2", text: "Permis Moto A2 obtenu sans souci. Encadrement carré sur le plateau, conseils précieux pour la circulation. Top !" },
+    { id: "r5", author: "Sophie B.", initials: "SB", date: "2025-10-30", rating: 5, formation: "Conduite accompagnée", text: "AAC commencée à 15 ans, permis à 17 ans du premier coup. L'équipe a été formidable avec moi tout au long du parcours. Merci !" },
+    { id: "r6", author: "Mehdi R.", initials: "MR", date: "2025-09-25", rating: 4, formation: "Permis B", text: "Bonne auto-école, équipe sympa et compétente. Petit délai pour les places d'examen mais c'est compréhensible vu la demande." },
+    { id: "r7", author: "Élise V.", initials: "EV", date: "2025-08-12", rating: 5, formation: "Permis boîte automatique", text: "Permis BEA en 2 mois, équipe au top. Le secrétariat est super réactif, ça change tout." },
+    { id: "r8", author: "Thomas G.", initials: "TG", date: "2025-07-08", rating: 5, formation: "Permis B", text: "Cadre familial, on se sent bien dès le premier rdv. Anne est exceptionnelle, vraiment. Merci pour tout !" },
+    { id: "r9", author: "Camille N.", initials: "CN", date: "2025-06-15", rating: 5, formation: "Code de la route", text: "Code obtenu à 38/40. Plateforme claire, cours en salle vraiment utiles. Inscription à l'examen sans souci." },
+    { id: "r10", author: "Antoine L.", initials: "AL", date: "2025-05-20", rating: 5, formation: "Permis B", text: "Une auto-école avec une vraie âme. L'équipe te suit, te corrige, te pousse. 20 ans d'expérience et ça se sent." },
+  ],
+
+  reviewStats: { average: 4.5, total: 147, distribution: { 5: 110, 4: 22, 3: 8, 2: 4, 1: 3 } },
+
+  faq: [
+    { category: "Inscription", q: "À partir de quel âge je peux m'inscrire ?", a: "15 ans pour la conduite accompagnée, 17 ans pour le permis B classique, 18 ans pour le permis moto A2 et l'examen pratique." },
+    { category: "Inscription", q: "Quels documents je dois fournir ?", a: "Pièce d'identité, 2 photos e-photo, justificatif de domicile -3 mois, ASSR2 (si né après 1988), attestation de recensement (16-25 ans)." },
+    { category: "Inscription", q: "Combien de temps avant de pouvoir commencer ?", a: "Sous 48h après ton inscription. Le secrétariat monte ton dossier ANTS et tu commences le code et la conduite dans la foulée." },
+    { category: "Tarifs", q: "Combien coûte le permis B ?", a: "Forfait 20h dès 1 390 € (manuelle) ou 1 290 € (boîte automatique). On a aussi 30h à 2 050 € et accéléré." },
+    { category: "Tarifs", q: "Vous proposez la passerelle BEA → manuelle ?", a: "Oui, à 490 € pour 7h de formation. Pas d'examen à repasser, juste une attestation à la fin." },
+    { category: "Tarifs", q: "Le permis est-il finançable avec le CPF ?", a: "Oui. Permis B, BEA, AAC, Moto A2, passerelle et code sont éligibles CPF." },
+    { category: "Conduite", q: "Boîte manuelle ou boîte auto, je choisis quoi ?", a: "Boîte auto = formation plus courte (13h mini), examen plus simple, mais voitures auto seulement. Manuelle = accès à toutes les voitures. Tu peux faire la passerelle plus tard (7h, 490 €)." },
+    { category: "Conduite", q: "Vous formez aussi à la moto ?", a: "Oui, Permis Moto A2 disponible. Plateau + circulation, équipement examen fourni." },
+    { category: "Conduite", q: "Combien d'heures de conduite faut-il en moyenne ?", a: "La moyenne nationale est à 35h. Chez nous, le forfait 20h convient à la majorité." },
+    { category: "Examen", q: "Quel est votre taux de réussite ?", a: "78% au premier passage sur le permis B (vs 60% en moyenne nationale). 88% pour les conduites accompagnées." },
+    { category: "Examen", q: "J'ai déjà raté un examen ailleurs, vous m'accueillez ?", a: "Bien sûr. C'est même une de nos spécialités : redonner confiance après un échec. Plusieurs avis Google le confirment." },
+    { category: "Pratique", q: "Vos horaires ?", a: "Du lundi au vendredi : 9h-12h et 14h-19h. Samedi matin : 9h-12h. Fermé le dimanche." },
+    { category: "Handicap", q: "Vous accueillez les personnes en situation de handicap ?", a: "Oui, on a une procédure dédiée et un référent handicap. Selon le handicap, on adapte ou on oriente vers un partenaire spécialisé." },
+  ],
+
+  social: {
+    google: "https://maps.google.com/?cid=versoie",
+    instagram: "https://instagram.com/auto.ecole.versoie",
+    facebook: "https://facebook.com/autoecoleversoie",
+  },
+};
