@@ -1,10 +1,12 @@
 import type { Tenant } from "@/lib/tenant-types";
 import { glieres } from "./glieres";
 import { foucher } from "./foucher";
+import { leman } from "./leman";
 
 export const TENANTS: Record<string, Tenant> = {
   glieres,
   foucher,
+  leman,
 };
 
 export const DEFAULT_TENANT_ID = "glieres";
