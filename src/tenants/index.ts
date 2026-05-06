@@ -3,12 +3,14 @@ import { glieres } from "./glieres";
 import { foucher } from "./foucher";
 import { leman } from "./leman";
 import { scuderia } from "./scuderia";
+import { versoie } from "./versoie";
 
 export const TENANTS: Record<string, Tenant> = {
   glieres,
   foucher,
   leman,
   scuderia,
+  versoie,
 };
 
 export const DEFAULT_TENANT_ID = "glieres";
