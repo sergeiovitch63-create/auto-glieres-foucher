@@ -29,7 +29,7 @@ export const foucher: Tenant = {
   },
 
   rating: 4.1,
-  ratingCount: 58,
+  ratingCount: 59,
   studentsTrained: 2400,
   successRateFirstAttempt: 72,
   positiveEvaluation: 94,
@@ -177,7 +177,7 @@ export const foucher: Tenant = {
     { id: "r10", author: "Yacine B.", initials: "YB", date: "2025-05-18", rating: 5, formation: "Conduite accompagnée", text: "Fait l'AAC ici, recommandé par mon frère qui l'avait fait chez eux il y a 5 ans. Toujours autant de qualité. Pierre est un vrai pro." },
   ],
 
-  reviewStats: { average: 4.1, total: 58, distribution: { 5: 41, 4: 9, 3: 4, 2: 2, 1: 2 } },
+  reviewStats: { average: 4.1, total: 59, distribution: { 5: 42, 4: 9, 3: 4, 2: 2, 1: 2 } },
 
   faq: [
     { category: "Inscription", q: "À partir de quel âge je peux m'inscrire ?", a: "Dès 15 ans pour la conduite accompagnée (AAC), 17 ans pour le permis B classique, 18 ans pour passer l'examen de conduite." },
